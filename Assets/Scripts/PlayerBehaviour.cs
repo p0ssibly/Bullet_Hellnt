@@ -24,6 +24,13 @@ public class PlayerBehaviour : MonoBehaviour
     rb.velocity = new Vector2(direction.x * MovSpeed, direction.y * MovSpeed);
   }
 
+  private void OnTriggerEnter(Collider2D collision)
+  {
+    if (collision.gameObject.tag == "Enemy") {
+      Debug.Log(collision);
+    }
+  }
+
   #region Properties
 
   public int Level;
