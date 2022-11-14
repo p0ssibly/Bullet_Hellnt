@@ -16,7 +16,10 @@ public class PlayerBehaviour : MonoBehaviour
     float directionX = Input.GetAxisRaw("Horizontal");
     float directionY = Input.GetAxisRaw("Vertical");
 
+    animator.SetFloat("Speed", Mathf.Abs(directionY) + Mathf.Abs(directionX));
+    
     direction = new Vector2(directionX, directionY).normalized;
+    if (direction.x < 0) { renderer.flipX = true; } else if (direction.x > 0) { renderer.flipX = false; }
   }
 
   private void FixedUpdate()
@@ -24,12 +27,12 @@ public class PlayerBehaviour : MonoBehaviour
     rb.velocity = new Vector2(direction.x * MovSpeed, direction.y * MovSpeed);
   }
 
-  private void OnTriggerEnter(Collider2D collision)
-  {
-    if (collision.gameObject.tag == "Enemy") {
-      Debug.Log(collision);
-    }
-  }
+  //private void OnTriggerEnter(Collider2D collision)
+  //{
+  //  if (collision.gameObject.tag == "Enemy") {
+  //    Debug.Log(collision);
+  //  }
+  //}
 
   #region Properties
 
@@ -42,5 +45,7 @@ public class PlayerBehaviour : MonoBehaviour
 
   private Rigidbody2D rb;
   private Vector2 direction;
+  public new SpriteRenderer renderer;
+  public Animator animator;
   #endregion
 }
