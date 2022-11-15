@@ -2,25 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Attack : MonoBehaviour
+public class GameStart : MonoBehaviour
 {
   // Start is called before the first frame update
-
   void Start()
   {
-
+    Instantiate(player, Vector3.zero, Quaternion.identity);
   }
 
   // Update is called once per frame
   void Update()
   {
-    animator.SetTrigger("insertTriggerNameHere");
 
   }
 
-  Animator animator;
-  Transform attackTransfom;
-  public float attackRange;
-  public float attackSize;
-
+  public GameObject player;
 }

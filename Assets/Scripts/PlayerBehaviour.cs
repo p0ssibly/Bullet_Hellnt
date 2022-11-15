@@ -23,7 +23,10 @@ public class PlayerBehaviour : MonoBehaviour
     float directionX = Input.GetAxisRaw("Horizontal");
     float directionY = Input.GetAxisRaw("Vertical");
 
+    animator.SetFloat("Speed", Mathf.Abs(directionY) + Mathf.Abs(directionX));
+    
     direction = new Vector2(directionX, directionY).normalized;
+    if (direction.x < 0) { renderer.flipX = true; } else if (direction.x > 0) { renderer.flipX = false; }
   }
 
   private void FixedUpdate()
@@ -74,5 +77,7 @@ public class PlayerBehaviour : MonoBehaviour
 
   private Rigidbody2D rb;
   private Vector2 direction;
+  public new SpriteRenderer renderer;
+  public Animator animator;
   #endregion
 }

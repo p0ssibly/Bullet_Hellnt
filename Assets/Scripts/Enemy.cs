@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
   // Start is called before the first frame update
-  public Transform target;
+  private Transform target;
   public float speed;
     private Rigidbody2D rb;
   void Start()
@@ -16,12 +16,17 @@ public class Enemy : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    transform.LookAt(target.position);
-    transform.Rotate(new Vector3(0, -90, 0), Space.Self);
-
-    if (Vector3.Distance(transform.position, target.position) > 1f)
+    target = GameObject.FindWithTag("Player").transform;
+    Vector3 displacement = target.position - transform.position;
+    displacement = displacement.normalized;
+    if (Vector2.Distance(target.position, transform.position) > 1.0f)
     {
-      transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+      transform.position += (displacement * speed * Time.deltaTime);
+
+    }
+    else
+    {
+   
     }
   }
 

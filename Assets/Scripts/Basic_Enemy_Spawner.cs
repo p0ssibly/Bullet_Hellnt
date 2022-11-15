@@ -13,13 +13,13 @@ public class Basic_Enemy_Spawner : MonoBehaviour
     timer += Time.deltaTime;
     if (timer >= interval)
     {
-      Vector3 randomPosition = origin + Random.insideUnitSphere * radius;
+      Vector2 randomPosition = origin + Random.insideUnitCircle * radius;
       Instantiate(objectToSpawn, randomPosition, Quaternion.identity);
       timer -= interval;
     }
   }
 
-  public Vector3 origin = Vector3.zero;
+  public Vector2 origin = Vector2.zero;
   public float radius = 10;
   public GameObject objectToSpawn;
   public float interval = 5;
