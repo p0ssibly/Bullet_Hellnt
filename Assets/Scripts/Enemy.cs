@@ -7,9 +7,10 @@ public class Enemy : MonoBehaviour
   // Start is called before the first frame update
   public Transform target;
   public float speed;
+    private Rigidbody2D rb;
   void Start()
   {
-
+        rb = GetComponent<Rigidbody2D>();
   }
 
   // Update is called once per frame
@@ -23,4 +24,10 @@ public class Enemy : MonoBehaviour
       transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
     }
   }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("PLAYER HIT");
+    }
+
 }
