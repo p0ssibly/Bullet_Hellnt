@@ -46,23 +46,19 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log(collision);
-            TakeDamage(10);
-            Debug.Log(currentHealth);
+            TakeDamage(20);
         }
     }
 
     public void TakeDamage(int damage)
     {
-
+        currentHealth -= damage;
         if (currentHealth <= 0)
         {
-  
-            //TODO: Sterben Funktion
+            //TODO: Sterben
         }
         else
         {
-            currentHealth -= damage;
             healthbar.SetHealth(currentHealth);
         }
     }
