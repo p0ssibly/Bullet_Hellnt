@@ -101,8 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a157a4139b394a4ab9705acd03818c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthbar: {fileID: 0}
   Level: 0
-  Health: 100
   Shield: 0
   Armor: 0
   Critical: 0
@@ -578,7 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   origin: {x: 0, y: 0}
   radius: 10
-  objectToSpawn: {fileID: 3703278769563439579, guid: be9c7ed9f72f4ab4e99b5ea6907ba1e5,
+  objectToSpawn: {fileID: 3882819492830953214, guid: 2feb6d9ecb6885740878d9697cc6ac76,
     type: 3}
   interval: 5
 --- !u!1 &7962899095725116517

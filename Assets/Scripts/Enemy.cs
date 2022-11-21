@@ -8,9 +8,15 @@ public class Enemy : MonoBehaviour
   private Transform target;
   public float speed;
     private Rigidbody2D rb;
-  void Start()
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    public HealthBar healthbar;
+    void Start()
   {
         rb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
+        healthbar.SetMaxHealth(maxHealth);
   }
 
   // Update is called once per frame
@@ -33,6 +39,18 @@ public class Enemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("PLAYER HIT");
+        takeDamage(30);
+    }
+
+    void takeDamage(int damage)
+    {
+        Debug.Log(currentHealth + "Enemy");
+        currentHealth -= damage;
+        healthbar.SetHealth(currentHealth);
+        if(currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

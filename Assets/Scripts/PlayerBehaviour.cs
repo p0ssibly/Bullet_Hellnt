@@ -53,13 +53,10 @@ public class PlayerBehaviour : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        healthbar.SetHealth(currentHealth);
         if (currentHealth <= 0)
         {
             //TODO: Sterben
-        }
-        else
-        {
-            healthbar.SetHealth(currentHealth);
         }
     }
 
