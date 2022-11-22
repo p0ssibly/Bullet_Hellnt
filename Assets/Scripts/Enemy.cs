@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
         takeDamage(30);
     }
 
-    void takeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);

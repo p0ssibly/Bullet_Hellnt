@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 20575045332425017}
+  - component: {fileID: 4658859182777081078}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -32,6 +33,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4658859182777081078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3035685601778971193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48cfdd671d8e5164897d1769615b2a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Sword
+  Damage: 10
+  SpriteRenderer: {fileID: 0}
+  Animation: {fileID: 0}
 --- !u!1 &5851114508860576506
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,6 +60,7 @@ GameObject:
   - component: {fileID: 1391099676617897667}
   - component: {fileID: 3636190846659042035}
   - component: {fileID: 2460626760185480710}
+  - component: {fileID: 4604775903448844366}
   m_Layer: 0
   m_Name: SpriteRenderer
   m_TagString: Untagged
@@ -106,12 +124,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1221662405, guid: 66c7d5d54a7e5fe4d8a63934e37a0ee6, type: 3}
+  m_Sprite: {fileID: -2126368018, guid: cad1eae2481258b4fa60af216b574ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 32, y: 32}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -127,7 +145,7 @@ Animator:
   m_GameObject: {fileID: 5851114508860576506}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2a230c43ca388ee4a93d207c9eb9005b, type: 2}
+  m_Controller: {fileID: 9100000, guid: bd51935d82b7f334babf1c4fc6bc1b4d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -137,3 +155,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4604775903448844366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5851114508860576506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e93de095d730a4e8f916315e299336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerBehaviour : MonoBehaviour
 {
   void Start()
@@ -16,16 +17,28 @@ public class PlayerBehaviour : MonoBehaviour
     float directionX = Input.GetAxisRaw("Horizontal");
     float directionY = Input.GetAxisRaw("Vertical");
 
-    animator.SetFloat("Speed", Mathf.Abs(directionY) + Mathf.Abs(directionX));
+    if (movementVector.x != 0)
+    {
+      lastHorizontalVector = movementVector.x;
+    }
+    if (movementVector.y != 0)
+    {
+      lastVerticalVector = movementVector.y;
+    }
 
-    direction = new Vector2(directionX, directionY).normalized;
-    if (direction.x < 0) { renderer.flipX = true; } else if (direction.x > 0) { renderer.flipX = false; }
+    animator.SetFloat("Speed", Mathf.Abs(movementVector.y) + Mathf.Abs(movementVector.x));
+
+    movementVector = new Vector3(movementVector.x, movementVector.y).normalized;
+    if (movementVector.x < 0) { renderer.flipX = true; } else if (movementVector.x > 0) { renderer.flipX = false; }
+
+    movementVector *= MovSpeed;
+    rb.velocity = movementVector;
   }
 
-  private void FixedUpdate()
-  {
-    rb.velocity = new Vector2(direction.x * MovSpeed, direction.y * MovSpeed);
-  }
+  //private void FixedUpdate()
+  //{
+  //  rb.velocity = new Vector2(direction.x * MovSpeed, direction.y * MovSpeed);
+  //}
 
   private void OnCollisionEnter2D(Collision2D collision)
   {
@@ -57,9 +70,14 @@ public class PlayerBehaviour : MonoBehaviour
   public float Critical;
   public float MovSpeed; //Speed multiplier
 
+  [HideInInspector]
+  public Vector3 movementVector;
+  [HideInInspector]
+  public float lastHorizontalVector;
+  [HideInInspector]
+  public float lastVerticalVector;
 
   private Rigidbody2D rb;
-  private Vector2 direction;
   public new SpriteRenderer renderer;
   public Animator animator;
   #endregion

@@ -5,8 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
   public string Name;
-  public float TimeToAttack { get; set; }
+  public float TimeToAttack;
   public int Damage;
-  public SpriteRenderer SpriteRenderer;
-  public Animation Animation;
+  public float Size;
 }

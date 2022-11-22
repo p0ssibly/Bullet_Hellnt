@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon_Behaviour : MonoBehaviour
+public class Weapon_Attack : MonoBehaviour
 {
 
-  void Start()
+  void Awake()
   {
-
+    playerBehaviour = GetComponentInParent<PlayerBehaviour>();
+    wep = GetComponentInChildren<Weapon>();
   }
 
   void Update()
   {
     timer -= Time.deltaTime;
-    if (timer < Wep.TimeToAttack)
+    if (timer < wep.TimeToAttack)
     {
       Attack();
     }
@@ -22,18 +23,40 @@ public class Weapon_Behaviour : MonoBehaviour
   #region Properties
   [SerializeField] GameObject LeftWeaponObject;
   [SerializeField] GameObject RightWeaponObject;
+  [SerializeField] Vector2 WeaponAttackSize;
+  PlayerBehaviour playerBehaviour;
 
-  public Weapon Wep;
-  public PlayerBehaviour Player;
-
+  Weapon wep;
   float timer;
+
 
   private void Attack()
   {
-    timer = Wep.TimeToAttack;
+    timer = wep.TimeToAttack;
+    if (playerBehaviour.lastHorizontalVector > 0)
+    {
+      LeftWeaponObject.SetActive(true);
+     Collider2D[] colliders = Physics2D.OverlapBoxAll(LeftWeaponObject.transform.position, WeaponAttackSize, 0f);
+      ApplyDamage(colliders);
+    }
+    else
+    {
+      RightWeaponObject.SetActive(true);
+      Collider2D[] colliders = Physics2D.OverlapBoxAll(RightWeaponObject.transform.position, WeaponAttackSize, 0f);
+      ApplyDamage(colliders);
+    }
+  }
 
-    RightWeaponObject.SetActive(true);
-    LeftWeaponObject.SetActive(true);
+  private void ApplyDamage(Collider2D[] colliders)
+  {
+    for(int i = 0; i < colliders.Length; i++)
+    {
+      Enemy e = colliders[i].GetComponent<Enemy>();
+      if (e!= null)
+      {
+        colliders[i].GetComponent<Enemy>().TakeDamage(wep.Damage);
+      }
+    }
   }
   #endregion
 }
