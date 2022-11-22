@@ -110,10 +110,10 @@ TextureImporter:
       name: Ayaya_mov_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 162
-        width: 22
-        height: 27
+        x: 16
+        y: 136
+        width: 88
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,8 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5998749d2fa2ba499d482dfaa1228ab
-      internalID: 1978221576
+      spriteID: f9f7240879a6cab4b864104fef177cb5
+      internalID: -739678515
       vertices: []
       indices: 
       edges: []
@@ -131,10 +131,10 @@ TextureImporter:
       name: Ayaya_mov_1
       rect:
         serializedVersion: 2
-        x: 3
-        y: 131
-        width: 20
-        height: 29
+        x: 116
+        y: 140
+        width: 80
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7c363d4127d53b43a2531e20196d229
-      internalID: -2056277393
+      spriteID: 9a301baad7291ed4c91124499d5bf97a
+      internalID: -1945830371
       vertices: []
       indices: 
       edges: []
@@ -152,10 +152,10 @@ TextureImporter:
       name: Ayaya_mov_2
       rect:
         serializedVersion: 2
-        x: 2
-        y: 98
-        width: 22
-        height: 29
+        x: 216
+        y: 136
+        width: 88
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe0b7cd0d81ecba4f99e3716ef8a9c1e
-      internalID: 305674827
+      spriteID: d23b42620cf8d424d9724d80593011f0
+      internalID: 1550953437
       vertices: []
       indices: 
       edges: []
@@ -173,10 +173,10 @@ TextureImporter:
       name: Ayaya_mov_3
       rect:
         serializedVersion: 2
-        x: 3
-        y: 66
-        width: 21
-        height: 28
+        x: 12
+        y: 8
+        width: 84
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3bf359de1d73f749af56e61e0cbbc6e
-      internalID: 1163571524
+      spriteID: 9c079e1e2a9b03340bd67d8ea63508aa
+      internalID: 1849659061
       vertices: []
       indices: 
       edges: []
@@ -194,10 +194,10 @@ TextureImporter:
       name: Ayaya_mov_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 34
-        width: 21
-        height: 29
+        x: 116
+        y: 8
+        width: 84
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfe57269bea67ff4c81e5ff7f4c23e94
-      internalID: -113057817
+      spriteID: 1be401162626f2b4797d0ca28ab41685
+      internalID: -758282724
       vertices: []
       indices: 
       edges: []
@@ -215,10 +215,10 @@ TextureImporter:
       name: Ayaya_mov_5
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1
-        width: 21
-        height: 30
+        x: 224
+        y: 4
+        width: 84
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df8e8f298ef651b419b29c9a0cbd9f7f
-      internalID: 1345083452
+      spriteID: ee8116b97a034e14b8fd5e68ba8233e6
+      internalID: 2146651605
       vertices: []
       indices: 
       edges: []
@@ -243,12 +243,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ayaya_mov_4: -113057817
-      Ayaya_mov_5: 1345083452
-      Ayaya_mov_1: -2056277393
-      Ayaya_mov_3: 1163571524
-      Ayaya_mov_0: 1978221576
-      Ayaya_mov_2: 305674827
+      Ayaya_mov_4: -758282724
+      Ayaya_mov_5: 2146651605
+      Ayaya_mov_1: -1945830371
+      Ayaya_mov_3: 1849659061
+      Ayaya_mov_0: -739678515
+      Ayaya_mov_2: 1550953437
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
