@@ -3203,9 +3203,13 @@ MonoBehaviour:
   offset: {x: 0, y: 0}
   origin: {fileID: 717678961}
   radius: 10
-  objectToSpawn: {fileID: 3882819492830953214, guid: 2feb6d9ecb6885740878d9697cc6ac76,
-    type: 3}
+  objectToSpawn:
+  - {fileID: 3882819492830953214, guid: 6816f473d6a716f4ea7551da54f24585, type: 3}
+  - {fileID: 3882819492830953214, guid: 2feb6d9ecb6885740878d9697cc6ac76, type: 3}
+  - {fileID: 3882819492830953214, guid: d904c44cdab2a4f4997b3c5f687d1794, type: 3}
   interval: 5
+  enemyObjectCount: 0
+  newEnemy: 60
 --- !u!4 &1164851121
 Transform:
   m_ObjectHideFlags: 0
