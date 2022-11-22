@@ -3057,7 +3057,6 @@ GameObject:
   - component: {fileID: 794136690}
   - component: {fileID: 794136689}
   - component: {fileID: 794136688}
-  - component: {fileID: 794136691}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3114,18 +3113,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &794136691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794136687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5882921b0b6b04ca77a8b9d9f2470a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &974745104
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,10 +3190,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0}
   origin: {fileID: 717678961}
   radius: 10
-  objectToSpawn:
-  - {fileID: 3882819492830953214, guid: 6816f473d6a716f4ea7551da54f24585, type: 3}
-  - {fileID: 3882819492830953214, guid: 2feb6d9ecb6885740878d9697cc6ac76, type: 3}
-  - {fileID: 3882819492830953214, guid: d904c44cdab2a4f4997b3c5f687d1794, type: 3}
+  objectToSpawn: []
   interval: 5
   enemyObjectCount: 0
   newEnemy: 60
@@ -3332,9 +3316,9 @@ MonoBehaviour:
   slider: {fileID: 1312742222}
   gradient:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0, b: 0, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.9843138, g: 0.015686275, b: 0.015686275, a: 1}
+    key1: {r: 0.9843138, g: 0.015686275, b: 0.015686275, a: 1}
+    key2: {r: 0.9843138, g: 0.015686275, b: 0.015686275, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
@@ -3342,7 +3326,7 @@ MonoBehaviour:
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
     ctime1: 65535
-    ctime2: 0
+    ctime2: 65535
     ctime3: 0
     ctime4: 0
     ctime5: 0
