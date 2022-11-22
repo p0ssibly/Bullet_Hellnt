@@ -24,8 +24,10 @@ public class PlayerBehaviour : MonoBehaviour
     float directionY = Input.GetAxisRaw("Vertical");
 
     animator.SetFloat("Speed", Mathf.Abs(directionY) + Mathf.Abs(directionX));
-    
-    direction = new Vector2(directionX, directionY).normalized;
+    Debug.Log("Y: " + directionY);
+    Debug.Log("X: " + directionX);
+
+        direction = new Vector2(directionX, directionY).normalized;
     if (direction.x < 0) { renderer.flipX = true; } else if (direction.x > 0) { renderer.flipX = false; }
   }
 

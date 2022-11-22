@@ -22,7 +22,14 @@ public class Enemy : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    target = GameObject.FindWithTag("Player").transform;
+    float directionX = Input.GetAxisRaw("Horizontal");
+    float directionY = Input.GetAxisRaw("Vertical");
+
+    //animator.SetFloat("Speed", Mathf.Abs(directionY) + Mathf.Abs(directionX));
+       // Debug.Log("Enemy Y: " + directionY);
+//Debug.Log("Enemy X: " + directionX);
+
+        target = GameObject.FindWithTag("Player").transform;
     Vector3 displacement = target.position - transform.position;
     displacement = displacement.normalized;
     if (Vector2.Distance(target.position, transform.position) > 1.0f)
@@ -53,4 +60,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public new SpriteRenderer renderer;
+    public Animator animator;
 }
