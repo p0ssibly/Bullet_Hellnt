@@ -3032,9 +3032,20 @@ PrefabInstance:
       propertyPath: currentHealth
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7962899095375651523, guid: 738a7081b91146745be9542f267fcd94,
+        type: 3}
+      propertyPath: origin
+      value: 
+      objectReference: {fileID: 717678961}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 738a7081b91146745be9542f267fcd94, type: 3}
+--- !u!4 &717678961 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2278162866702460706, guid: 738a7081b91146745be9542f267fcd94,
+    type: 3}
+  m_PrefabInstance: {fileID: 489367801}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &794136687
 GameObject:
   m_ObjectHideFlags: 0
@@ -3159,6 +3170,56 @@ Transform:
   - {fileID: 221978999}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1164851119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164851121}
+  - component: {fileID: 1164851120}
+  m_Layer: 0
+  m_Name: Enemy Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1164851120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164851119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0013aa8e52ee34eb4ba6eaa8e6a69a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0}
+  origin: {fileID: 717678961}
+  radius: 10
+  objectToSpawn: {fileID: 3882819492830953214, guid: 2feb6d9ecb6885740878d9697cc6ac76,
+    type: 3}
+  interval: 5
+--- !u!4 &1164851121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164851119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.1366057, y: 0.03609811, z: 0.943064}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1312742220
 GameObject:

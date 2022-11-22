@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3f4dd3317eaf92b41b79bb62700ffccf
+guid: 0df4b919a79ca52468af68b10d54cce5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ayaya_idle_0
+      name: Ayaya_idle 1_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 130
-        width: 21
-        height: 29
+        x: 8
+        y: 120
+        width: 84
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed1f835cfe7ad1c40802ccc2f1d309ee
-      internalID: 2092067342
+      spriteID: 7ae8ed1fc058c0c42aa425a50aaad75b
+      internalID: -384296267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayaya_idle_1
+      name: Ayaya_idle 1_1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 98
-        width: 22
-        height: 30
+        x: 96
+        y: 120
+        width: 88
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e2a0e10bb4684e4d8b23aeff1ccf892
-      internalID: 1889838924
+      spriteID: 83541b0eba60536489e9f02e0005a563
+      internalID: 726076931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayaya_idle_2
+      name: Ayaya_idle 1_2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 66
-        width: 23
-        height: 29
+        x: 184
+        y: 120
+        width: 92
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: daf7516e676c43346b38aff9488ff158
-      internalID: 921497669
+      spriteID: b4c8b8e94132e7e479b76ffc6df9f209
+      internalID: 692173374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayaya_idle_3
+      name: Ayaya_idle 1_3
       rect:
         serializedVersion: 2
-        x: 2
-        y: 34
-        width: 22
-        height: 30
+        x: 4
+        y: 0
+        width: 88
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bddf9e9ca279f043b4dabb9783e97e6
-      internalID: -1725658110
+      spriteID: 1dd36d8a37a547f4fbc77e54e1daad3e
+      internalID: 62998923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayaya_idle_4
+      name: Ayaya_idle 1_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 2
-        width: 21
-        height: 30
+        x: 100
+        y: 0
+        width: 84
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f55220369228d6c4fb94b190158bbee4
-      internalID: -1586651912
+      spriteID: 2512143a6709925449460f548a1ae213
+      internalID: -1869963920
       vertices: []
       indices: 
       edges: []
@@ -222,11 +222,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ayaya_idle_1: 1889838924
-      Ayaya_idle_3: -1725658110
-      Ayaya_idle_0: 2092067342
-      Ayaya_idle_2: 921497669
-      Ayaya_idle_4: -1586651912
+      Ayaya_idle 1_1: 726076931
+      Ayaya_idle 1_3: 62998923
+      Ayaya_idle 1_2: 692173374
+      Ayaya_idle 1_4: -1869963920
+      Ayaya_idle 1_0: -384296267
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

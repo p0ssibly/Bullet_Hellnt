@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Basic_Enemy_Spawner : MonoBehaviour
 {
-  void Start()
-  {
-  }
+    void Start()
+    {
+    }
 
   void Update()
   {
@@ -18,13 +18,14 @@ public class Basic_Enemy_Spawner : MonoBehaviour
                 enemyObjectCount += 1;
                 newEnemy += 120;
             }
-      Vector2 randomPosition = origin + Random.insideUnitCircle * radius;
-      Instantiate(objectToSpawn[enemyObjectCount], randomPosition, Quaternion.identity);
-      interval += 5;
+            Vector2 randomPosition = (Vector2)origin.transform.position + Random.insideUnitCircle * radius + offset;
+            Instantiate(objectToSpawn[enemyObjectCount], randomPosition, Quaternion.identity, transform);
+            interval += 5;
         }
   }
 
-  public Vector2 origin = Vector2.zero;
+  public Vector2 offset = Vector2.zero;
+  public Transform origin;
   public float radius = 10;
   public GameObject[] objectToSpawn;
   public float interval = 5;
