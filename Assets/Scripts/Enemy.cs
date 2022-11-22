@@ -7,16 +7,16 @@ public class Enemy : MonoBehaviour
   // Start is called before the first frame update
   private Transform target;
   public float speed;
-    private Rigidbody2D rb;
-    public int maxHealth = 100;
-    public int currentHealth;
+  private Rigidbody2D rb;
+  public int maxHealth = 100;
+  public int currentHealth;
 
-    public HealthBar healthbar;
-    void Start()
+  public HealthBar healthbar;
+  void Start()
   {
-        rb = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
-        healthbar.SetMaxHealth(maxHealth);
+    rb = GetComponent<Rigidbody2D>();
+    currentHealth = maxHealth;
+    healthbar.SetMaxHealth(maxHealth);
   }
 
   // Update is called once per frame
@@ -26,10 +26,10 @@ public class Enemy : MonoBehaviour
     float directionY = Input.GetAxisRaw("Vertical");
 
     //animator.SetFloat("Speed", Mathf.Abs(directionY) + Mathf.Abs(directionX));
-       // Debug.Log("Enemy Y: " + directionY);
-//Debug.Log("Enemy X: " + directionX);
+    // Debug.Log("Enemy Y: " + directionY);
+    //Debug.Log("Enemy X: " + directionX);
 
-        target = GameObject.FindWithTag("Player").transform;
+    target = GameObject.FindWithTag("Player").transform;
     Vector3 displacement = target.position - transform.position;
     displacement = displacement.normalized;
     if (Vector2.Distance(target.position, transform.position) > 1.0f)
@@ -39,25 +39,25 @@ public class Enemy : MonoBehaviour
     }
     else
     {
-   
+
     }
   }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        takeDamage(30);
-    }
+  private void OnCollisionEnter2D(Collision2D collision)
+  {
+    TakeDamage(30);
+  }
 
-    public void TakeDamage(int damage)
+  public void TakeDamage(int damage)
+  {
+    currentHealth -= damage;
+    healthbar.SetHealth(currentHealth);
+    if (currentHealth <= 0)
     {
-        currentHealth -= damage;
-        healthbar.SetHealth(currentHealth);
-        if(currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
+      Destroy(gameObject);
     }
+  }
 
-    public new SpriteRenderer renderer;
-    public Animator animator;
+  public new SpriteRenderer renderer;
+  public Animator animator;
 }

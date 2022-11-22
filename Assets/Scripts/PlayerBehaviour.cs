@@ -14,8 +14,8 @@ public class PlayerBehaviour : MonoBehaviour
 
   void Update()
   {
-    float directionX = Input.GetAxisRaw("Horizontal");
-    float directionY = Input.GetAxisRaw("Vertical");
+    movementVector.x = Input.GetAxisRaw("Horizontal");
+    movementVector.y = Input.GetAxisRaw("Vertical");
 
     if (movementVector.x != 0)
     {
@@ -34,11 +34,6 @@ public class PlayerBehaviour : MonoBehaviour
     movementVector *= MovSpeed;
     rb.velocity = movementVector;
   }
-
-  //private void FixedUpdate()
-  //{
-  //  rb.velocity = new Vector2(direction.x * MovSpeed, direction.y * MovSpeed);
-  //}
 
   private void OnCollisionEnter2D(Collision2D collision)
   {
