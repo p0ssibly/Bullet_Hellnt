@@ -45,13 +45,11 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("PLAYER HIT");
-        takeDamage(40);
+        takeDamage(30);
     }
 
     void takeDamage(int damage)
     {
-        Debug.Log(currentHealth + "Enemy");
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
         if(currentHealth <= 0)

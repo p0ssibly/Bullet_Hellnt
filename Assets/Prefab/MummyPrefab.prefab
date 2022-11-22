@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7808367576929130778}
   m_Layer: 0
-  m_Name: EnemyPreFab
+  m_Name: MummyPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,6 +228,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 2281811987745356527}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.0627451, b: 0, a: 1}
+    key1: {r: 1, g: 0.9294118, b: 0.20784315, a: 1}
+    key2: {r: 0.0627451, g: 0.86274517, b: 0.1254902, a: 1}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16384
+    ctime1: 32768
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 65535
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  fill: {fileID: 9037847149267764339}
 --- !u!1 &8987836138042546265
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +422,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4655927020675524600, guid: 6d11d3f5ae62a4d418ea7b751ec8cc4f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 659998059, guid: 51586a7e9d045ec4697d8c03e1aca4e9,
+        type: 3}
+    - target: {fileID: 8526727438925357291, guid: 6d11d3f5ae62a4d418ea7b751ec8cc4f,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b59d9d4967ed80441a0e3595ec39eb3d, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d11d3f5ae62a4d418ea7b751ec8cc4f, type: 3}

@@ -13,15 +13,22 @@ public class Basic_Enemy_Spawner : MonoBehaviour
     timer += Time.deltaTime;
     if (timer >= interval)
     {
+            if(timer >= newEnemy)
+            {
+                enemyObjectCount += 1;
+                newEnemy += 120;
+            }
       Vector2 randomPosition = origin + Random.insideUnitCircle * radius;
-      Instantiate(objectToSpawn, randomPosition, Quaternion.identity);
-      timer -= interval;
-    }
+      Instantiate(objectToSpawn[enemyObjectCount], randomPosition, Quaternion.identity);
+      interval += 5;
+        }
   }
 
   public Vector2 origin = Vector2.zero;
   public float radius = 10;
-  public GameObject objectToSpawn;
+  public GameObject[] objectToSpawn;
   public float interval = 5;
+  public int enemyObjectCount = 0;
+  public float newEnemy = 60;
   float timer;
 }
