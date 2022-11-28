@@ -1,19 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pausemenu : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
 
-    public GameObject pauseMenuUI;
+    public GameObject pauseMenu;
+
+    public static bool isPaused;
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
+        pauseMenu.SetActive(false);
+    }
+    void Update() {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameIsPaused)
+            if (IsPaused)
             {
                 Resume();
             } else
@@ -23,14 +28,24 @@ public class Pausemenu : MonoBehaviour
         }
     }
 
+    void Pause() {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
     void Resume() {
-        pauseMenuUI.SetActive(false);
+        pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
-    void Pause() {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        GameIsPaused = true;
+    public void GoToMainMenu()
+    {
+        Time.timeScale = if;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
