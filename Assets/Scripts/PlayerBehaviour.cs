@@ -11,6 +11,7 @@ public class PlayerBehaviour : MonoBehaviour
     currentHealth = maxHealth;
     healthbar.SetMaxHealth(maxHealth);
     levelDisplay.SetLevel(Level);
+    lastHorizontalVector = 1;
   }
 
   void Update()

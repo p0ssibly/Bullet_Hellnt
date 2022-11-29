@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Disable_Item : MonoBehaviour
 {
-  private void OnEnable()
+  void OnEnable()
   {
     timer = timeToDisable;
   }
@@ -19,7 +19,7 @@ public class Disable_Item : MonoBehaviour
   }
 
   #region Properties
-  float timeToDisable = 0.8f;
+  float timeToDisable = 0.6f;
   float timer;
   #endregion
 }

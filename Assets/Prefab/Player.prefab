@@ -108,6 +108,9 @@ MonoBehaviour:
   Armor: 0
   Critical: 0
   MovSpeed: 5
+  movementVector: {x: 0, y: 0, z: 0}
+  lastHorizontalVector: 0
+  lastVerticalVector: 0
   renderer: {fileID: 5670645377100505262}
   animator: {fileID: 3437582715819893185}
 --- !u!95 &1047499150362846874
@@ -262,10 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftWeaponObject: {fileID: 4609467247359368122}
   RightWeaponObject: {fileID: 9133170850411177155}
-  TimeToAttack: 2
-  Damage: 10
-  directionX: 0
-  directionY: 0
+  WeaponAttackSize: {x: 0, y: 0}
 --- !u!1 &7151880374650924814
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+  private void Awake()
+  {
+    //Size = GetComponent<Collider>().Wid;
+  }
+
   public string Name;
   public float TimeToAttack;
   public int Damage;
-  public float Size;
+  public Vector2 Size;
 }
