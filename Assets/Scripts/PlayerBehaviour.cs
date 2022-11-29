@@ -10,6 +10,7 @@ public class PlayerBehaviour : MonoBehaviour
     rb = GetComponent<Rigidbody2D>();
     currentHealth = maxHealth;
     healthbar.SetMaxHealth(maxHealth);
+    levelDisplay.SetLevel(Level);
   }
 
   void Update()
@@ -56,6 +57,7 @@ public class PlayerBehaviour : MonoBehaviour
   #region Properties
 
   public HealthBar healthbar;
+  public LevelDisplay levelDisplay;
   public int maxHealth = 100;
   public int currentHealth;
 
