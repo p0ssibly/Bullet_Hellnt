@@ -8,9 +8,13 @@ public class PlayerBehaviour : MonoBehaviour
   void Start()
   {
     rb = GetComponent<Rigidbody2D>();
-    currentHealth = maxHealth;
-    healthbar.SetMaxHealth(maxHealth);
-    levelDisplay.SetLevel(Level);
+
+    CurrentHealth = maxHealth;
+    ExperiencePoints = 0;
+    Level = 1;
+    healthBar.SetMaxValue(maxHealth);
+    expBar.SetMaxValue(maxExp);
+
     lastHorizontalVector = 1;
   }
 
@@ -35,7 +39,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     movementVector *= MovSpeed;
     rb.velocity = movementVector;
-  }
+    }
 
   private void OnCollisionEnter2D(Collision2D collision)
   {
@@ -47,22 +51,52 @@ public class PlayerBehaviour : MonoBehaviour
 
   public void TakeDamage(int damage)
   {
-    currentHealth -= damage;
-    healthbar.SetHealth(currentHealth);
+    CurrentHealth -= damage;
     if (currentHealth <= 0)
     {
       //TODO: Sterben
     }
   }
 
+  public void LevelUp()
+  {
+    Level++;
+    ExperiencePoints = 0;
+    maxExp += maxExp / 3;
+  }
+
   #region Properties
 
-  public HealthBar healthbar;
-  public LevelDisplay levelDisplay;
-  public int maxHealth = 100;
-  public int currentHealth;
+  private int experiencePoints;
+  private int currentHealth;
+  private int level;
+  private Rigidbody2D rb;
 
-  public int Level;
+  public ValueBar healthBar;
+  public int maxHealth = 100;
+
+  public LevelDisplay levelDisplay;
+  public ValueBar expBar;
+  public int maxExp = 100;
+
+  public int CurrentHealth {
+    get { return currentHealth; }
+    set { currentHealth = value; healthBar.SetValue(currentHealth); }
+  }
+  public int ExperiencePoints {
+    get { return experiencePoints; }
+    set { 
+        experiencePoints = value; 
+        expBar.SetValue(experiencePoints);
+        if (experiencePoints >= maxExp)
+            LevelUp();
+    }
+  }
+  public int Level {
+    get { return level; }
+    set { level = value; levelDisplay.SetLevel(level); }
+  }
+
   public int Shield;
   public int Armor;
   public float Critical;
@@ -75,7 +109,6 @@ public class PlayerBehaviour : MonoBehaviour
   [HideInInspector]
   public float lastVerticalVector;
 
-  private Rigidbody2D rb;
   public new SpriteRenderer renderer;
   public Animator animator;
   #endregion

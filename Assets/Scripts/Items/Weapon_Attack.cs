@@ -52,6 +52,7 @@ public class Weapon_Attack : MonoBehaviour
       Enemy e = colliders[i].GetComponent<Enemy>();
       if (e != null)
       {
+        colliders[i].GetComponent<Enemy>().lastAttacker = GetComponentInParent<PlayerBehaviour>();
         colliders[i].GetComponent<Enemy>().TakeDamage(wep.Damage);
       }
     }

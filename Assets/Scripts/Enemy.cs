@@ -10,13 +10,14 @@ public class Enemy : MonoBehaviour
   private Rigidbody2D rb;
   public int maxHealth = 100;
   public int currentHealth;
+  public PlayerBehaviour lastAttacker;
 
-  public HealthBar healthbar;
+  public ValueBar healthbar;
   void Start()
   {
     rb = GetComponent<Rigidbody2D>();
     currentHealth = maxHealth;
-    healthbar.SetMaxHealth(maxHealth);
+    healthbar.SetMaxValue(maxHealth);
   }
 
   // Update is called once per frame
@@ -39,16 +40,19 @@ public class Enemy : MonoBehaviour
 
   private void OnCollisionEnter2D(Collision2D collision)
   {
+    lastAttacker = collision.gameObject.GetComponent<PlayerBehaviour>();
     TakeDamage(30);
   }
 
   public void TakeDamage(int damage)
   {
     currentHealth -= damage;
-    healthbar.SetHealth(currentHealth);
+    healthbar.SetValue(currentHealth);
     if (currentHealth <= 0)
     {
-      Destroy(gameObject);
+        lastAttacker.ExperiencePoints =
+            lastAttacker.ExperiencePoints + 20;
+        Destroy(gameObject);
     }
   }
 
