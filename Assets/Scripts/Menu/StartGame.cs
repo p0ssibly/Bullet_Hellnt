@@ -5,18 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-  
-        public void GameSceneLoad()
-    {
-        SceneManager.LoadScene(1);
-    }
-    public void GameQuit()
-    {
-        Application.Quit();
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+  public void GameSceneLoad()
+  {
+    SceneManager.LoadScene(1);
+  }
+  public void GameQuit()
+  {
+    Application.Quit();
+  }
 }

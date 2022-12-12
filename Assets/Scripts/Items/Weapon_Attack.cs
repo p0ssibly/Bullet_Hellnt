@@ -21,27 +21,28 @@ public class Weapon_Attack : MonoBehaviour
 
   void Update()
   {
-    timer -= Time.deltaTime;
     if (timer < wep.TimeToAttack)
     {
-      Attack();
+      timer += Time.deltaTime;
+      return;
     }
+
+    timer = 0;
+    Attack();
   }
   private void Attack()
   {
-    timer = wep.TimeToAttack;
-
     if (playerBehaviour.lastHorizontalVector < 0)
     {
       LeftWeaponObject.SetActive(true);
-      Collider2D[] colliders = Physics2D.OverlapBoxAll(LeftWeaponObject.transform.position, WeaponAttackSize, 0f);
-      ApplyDamage(colliders);
+      //Collider2D[] colliders = Physics2D.OverlapBoxAll(LeftWeaponObject.transform.position, wep.Size, 0f);
+      //ApplyDamage(colliders);
     }
     else
     {
       RightWeaponObject.SetActive(true);
-      Collider2D[] colliders = Physics2D.OverlapBoxAll(RightWeaponObject.transform.position, WeaponAttackSize, 0f);
-      ApplyDamage(colliders);
+      //Collider2D[] colliders = Physics2D.OverlapBoxAll(RightWeaponObject.transform.position, wep.Size, 0f);
+      //ApplyDamage(colliders);
     }
   }
 
@@ -61,11 +62,9 @@ public class Weapon_Attack : MonoBehaviour
   #region Properties
   [SerializeField] GameObject LeftWeaponObject;
   [SerializeField] GameObject RightWeaponObject;
-  [SerializeField] Vector2 WeaponAttackSize;
   PlayerBehaviour playerBehaviour;
 
   Weapon wep;
   float timer;
-  float cooldown = 10;
   #endregion
 }

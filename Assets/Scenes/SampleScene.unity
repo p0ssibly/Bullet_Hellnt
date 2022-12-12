@@ -3097,7 +3097,7 @@ PrefabInstance:
     - target: {fileID: 2393967728453671181, guid: 41ea6afb203377e42995d7d016ea5907,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7947911505737750448, guid: 41ea6afb203377e42995d7d016ea5907,
         type: 3}
@@ -3168,6 +3168,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505844789838, guid: 41ea6afb203377e42995d7d016ea5907,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -3506,6 +3511,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2065882045820867544, guid: 738a7081b91146745be9542f267fcd94,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2278162866702460705, guid: 738a7081b91146745be9542f267fcd94,
         type: 3}
       propertyPath: m_Name
@@ -3625,6 +3635,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239350830701566487, guid: 738a7081b91146745be9542f267fcd94,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5670645377100505262, guid: 738a7081b91146745be9542f267fcd94,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7962899094588545286, guid: 738a7081b91146745be9542f267fcd94,
         type: 3}
@@ -4258,7 +4278,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 0}
-  origin: {fileID: 717678961}
   radius: 10
   objectToSpawn:
   - {fileID: 3882819492830953214, guid: 2feb6d9ecb6885740878d9697cc6ac76, type: 3}

@@ -4,28 +4,23 @@ using UnityEngine;
 
 public class Basic_Enemy_Spawner : MonoBehaviour
 {
-    void Start()
-    {
-    }
-
   void Update()
   {
     timer += Time.deltaTime;
     if (timer >= interval)
     {
-            if(timer >= newEnemy)
-            {
-                enemyObjectCount += 1;
-                newEnemy += 120;
-            }
-            Vector2 randomPosition = (Vector2)origin.transform.position + Random.insideUnitCircle * radius + offset;
-            Instantiate(objectToSpawn[enemyObjectCount], randomPosition, Quaternion.identity, transform);
-            interval += 5;
-        }
+      if (timer >= newEnemy)
+      {
+        enemyObjectCount += 1;
+        newEnemy += 120;
+      }
+      Vector2 randomPosition = (Vector2)GameObject.FindWithTag("Player").transform.position + Random.insideUnitCircle * radius + offset;
+      Instantiate(objectToSpawn[enemyObjectCount], randomPosition, Quaternion.identity, transform);
+      interval += 5;
+    }
   }
 
   public Vector2 offset = Vector2.zero;
-  public Transform origin;
   public float radius = 10;
   public GameObject[] objectToSpawn;
   public float interval = 5;

@@ -362,10 +362,30 @@ PrefabInstance:
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 2651378700773014435}
+    - target: {fileID: 3703278769563439576, guid: 6d11d3f5ae62a4d418ea7b751ec8cc4f,
+        type: 3}
+      propertyPath: experience
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3703278769563439579, guid: 6d11d3f5ae62a4d418ea7b751ec8cc4f,
         type: 3}
       propertyPath: m_Name
       value: Sample Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703278769563439580, guid: 6d11d3f5ae62a4d418ea7b751ec8cc4f,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703278769563439580, guid: 6d11d3f5ae62a4d418ea7b751ec8cc4f,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703278769563439580, guid: 6d11d3f5ae62a4d418ea7b751ec8cc4f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3703278769563439582, guid: 6d11d3f5ae62a4d418ea7b751ec8cc4f,
         type: 3}

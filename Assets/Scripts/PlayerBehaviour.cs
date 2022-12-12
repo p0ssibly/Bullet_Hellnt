@@ -13,7 +13,7 @@ public class PlayerBehaviour : MonoBehaviour
     ExperiencePoints = 0;
     Level = 1;
     healthBar.SetMaxValue(maxHealth);
-    expBar.SetMaxValue(maxExp);
+    ExpBar.SetMaxValue(MaxExp);
 
     lastHorizontalVector = 1;
   }
@@ -39,20 +39,13 @@ public class PlayerBehaviour : MonoBehaviour
 
     movementVector *= MovSpeed;
     rb.velocity = movementVector;
-    }
-
-  private void OnCollisionEnter2D(Collision2D collision)
-  {
-    if (collision.gameObject.tag == "Enemy")
-    {
-      TakeDamage(20);
-    }
   }
 
   public void TakeDamage(int damage)
   {
+    Debug.Log($"Took Damage: {damage}");
     CurrentHealth -= damage;
-    if (currentHealth <= 0)
+    if (_currentHealth <= 0)
     {
       //TODO: Sterben
     }
@@ -62,39 +55,58 @@ public class PlayerBehaviour : MonoBehaviour
   {
     Level++;
     ExperiencePoints = 0;
-    maxExp += maxExp / 3;
+    MaxExp += MaxExp / 3;
+
+    UpgradePanel.Open();
+  }
+
+  public void GiveExperience(int amount)
+  {
+    ExperiencePoints += amount;
   }
 
   #region Properties
 
-  private int experiencePoints;
-  private int currentHealth;
+  private int _experiencePoints;
+  private int _currentHealth = 0;
   private int level;
   private Rigidbody2D rb;
 
   public ValueBar healthBar;
   public int maxHealth = 100;
 
-  public LevelDisplay levelDisplay;
-  public ValueBar expBar;
-  public int maxExp = 100;
+  public LevelDisplay LevelDisplay;
+  public ValueBar ExpBar;
+  public int MaxExp = 100;
 
-  public int CurrentHealth {
-    get { return currentHealth; }
-    set { currentHealth = value; healthBar.SetValue(currentHealth); }
-  }
-  public int ExperiencePoints {
-    get { return experiencePoints; }
-    set { 
-        experiencePoints = value; 
-        expBar.SetValue(experiencePoints);
-        if (experiencePoints >= maxExp)
-            LevelUp();
+  public int CurrentHealth
+  {
+    get { return _currentHealth; }
+    set
+    {
+      _currentHealth = value;
+      healthBar.SetValue(CurrentHealth);
     }
   }
-  public int Level {
+  public int ExperiencePoints
+  {
+    get { return _experiencePoints; }
+    set
+    {
+      _experiencePoints = value;
+
+      ExpBar.SetValue(_experiencePoints);
+      if (_experiencePoints >= MaxExp) { LevelUp(); }
+    }
+  }
+  public int Level
+  {
     get { return level; }
-    set { level = value; levelDisplay.SetLevel(level); }
+    set
+    {
+      level = value;
+      LevelDisplay.SetLevel(level);
+    }
   }
 
   public int Shield;
@@ -105,11 +117,13 @@ public class PlayerBehaviour : MonoBehaviour
   [HideInInspector]
   public Vector3 movementVector;
   [HideInInspector]
-  public float lastHorizontalVector;
+  public float lastHorizontalVector = 1;
   [HideInInspector]
   public float lastVerticalVector;
 
   public new SpriteRenderer renderer;
   public Animator animator;
+
+  [SerializeField] UpgradeMenuHandler UpgradePanel;
   #endregion
 }
