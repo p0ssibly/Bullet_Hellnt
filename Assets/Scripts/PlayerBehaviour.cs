@@ -47,7 +47,7 @@ public class PlayerBehaviour : MonoBehaviour
     CurrentHealth -= damage;
     if (_currentHealth <= 0)
     {
-      //TODO: Sterben
+            FindObjectOfType<GameManager>().GameOver();
     }
   }
 
