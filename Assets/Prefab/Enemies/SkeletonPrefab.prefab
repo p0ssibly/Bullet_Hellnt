@@ -365,7 +365,7 @@ PrefabInstance:
     - target: {fileID: 3703278769563439576, guid: 6d11d3f5ae62a4d418ea7b751ec8cc4f,
         type: 3}
       propertyPath: experience
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3703278769563439579, guid: 6d11d3f5ae62a4d418ea7b751ec8cc4f,
         type: 3}
