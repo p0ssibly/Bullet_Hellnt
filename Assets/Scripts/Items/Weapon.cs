@@ -30,11 +30,3 @@ public class Weapon : MonoBehaviour
   public float Speed;
   public int MaxPierce;
 }
-
-[CreateAssetMenu]
-public class WeaponData: ScriptableObject
-{
-  public string Name;
-  public Weapon WeaponStats;
-  public GameObject WeaponPrefabObject;
-}

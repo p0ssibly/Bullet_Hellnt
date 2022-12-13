@@ -12,10 +12,10 @@ public class Weapon_Manager : MonoBehaviour
 
 
   [SerializeField] Transform WeaponContainerTransform;
-  [SerializeField] WeaponData StartingWeapon;
+  [SerializeField] ScriptableWeapon StartingWeapon;
 
-  public void AddWeapon(WeaponData weaponData)
+  public void AddWeapon(ScriptableWeapon weaponData)
   {
-    GameObject weaponGameObject = Instantiate(weaponData.WeaponPrefabObject, WeaponContainerTransform);
+    //GameObject weaponGameObject = Instantiate(weaponData.WeaponPrefabObject, WeaponContainerTransform);
   }
 }
