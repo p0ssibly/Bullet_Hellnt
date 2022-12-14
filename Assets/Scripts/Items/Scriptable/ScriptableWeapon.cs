@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer), typeof(Animator), typeof(BoxCollider2D))]
+[RequireComponent(typeof(Collider2D), typeof(SpriteRenderer), typeof(WeaponData))]
 public class ScriptableWeapon : MonoBehaviour
 {
   public WeaponData Data;
-
   private float timer;
   private SpriteRenderer spriteRenderer;
   private Animator anim;
-
 
   public void Start()
   {
@@ -33,8 +31,25 @@ public class ScriptableWeapon : MonoBehaviour
     Attack();
   }
 
+  private void OnTriggerEnter2D(Collider2D collision)
+  {
+    GameObject go = collision.gameObject;
+    if (go.tag == "Enemy")
+    {
+      go.GetComponent<Enemy>().TakeDamage(Data.Damage);
+
+    }
+  }
+
   private void Attack()
   {
-
+    //if (playerBehaviour.lastHorizontalVector < 0)
+    //{
+    //  LeftWeaponObject.SetActive(true);
+    //}
+    //else
+    //{
+    //  RightWeaponObject.SetActive(true);
+    //}
   }
 }
