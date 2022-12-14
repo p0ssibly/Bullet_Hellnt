@@ -16,8 +16,8 @@ public class Weapon_Manager : MonoBehaviour
   public void AddWeapon(GameObject weapon)
   {
     ScriptableWeapon weaponData = weapon.GetComponent<ScriptableWeapon>();
-    weapon.transform.localScale = new Vector3(weaponData.Data.Size.x, weaponData.Data.Size.y);
-    weaponData.transform.Translate(weaponData.transform.position.x + 1, weaponData.transform.position.y, weaponData.transform.position.z);
+    //weapon.transform.localScale = new Vector3(weaponData.Data.Size.x, weaponData.Data.Size.y);
+    //weaponData.transform.Translate(weaponData.transform.position.x + 1, weaponData.transform.position.y, weaponData.transform.position.z);
     
 
     Instantiate(weapon, WeaponContainerTransform.parent);
