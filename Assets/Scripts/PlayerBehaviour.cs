@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerBehaviour : MonoBehaviour
@@ -47,7 +48,7 @@ public class PlayerBehaviour : MonoBehaviour
     CurrentHealth -= damage;
     if (_currentHealth <= 0)
     {
-            FindObjectOfType<GameManager>().GameOver();
+      SceneManager.LoadScene(2);
     }
   }
 
@@ -56,8 +57,6 @@ public class PlayerBehaviour : MonoBehaviour
     Level++;
     ExperiencePoints = 0;
     MaxExp += MaxExp / 3;
-
-    UpgradePanel.Open();
   }
 
   public void GiveExperience(int amount)

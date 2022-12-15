@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
   public int currentHealth;
   public int contactDamage = 10;
   public PlayerBehaviour lastAttacker;
-  public int experience = 100;
+  public int experience = 10;
 
   public ValueBar healthbar;
   void Start()
@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     //target = GameObject.FindWithTag("Player").transform;
     Vector3 displacement = target.position - transform.position;
     displacement = displacement.normalized;
-    if (Vector2.Distance(target.position, transform.position) > 0.9f)
+    if (Vector2.Distance(target.position, transform.position) > 0.69f)
     {
       transform.position += (displacement * speed * Time.deltaTime);
     }
