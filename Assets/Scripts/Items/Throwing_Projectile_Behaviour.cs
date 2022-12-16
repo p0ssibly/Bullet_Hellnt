@@ -6,7 +6,7 @@ public class Throwing_Projectile_Behaviour : MonoBehaviour
 {
   private void Awake()
   {
-    wep = GetComponent<Weapon>();
+    wep = GetComponent<Ranged>();
   }
 
   void Update()
@@ -56,5 +56,5 @@ public class Throwing_Projectile_Behaviour : MonoBehaviour
   }
 
   Vector3 direction;
-  Weapon wep;
+  Ranged wep;
 }

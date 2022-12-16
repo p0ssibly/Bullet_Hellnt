@@ -23,10 +23,5 @@ public class Weapon : MonoBehaviour
 
   public float TimeToAttack;
   public int Damage;
-
   public Vector2 Size;
-
-  //Fuer Projektile
-  public float Speed;
-  public int MaxPierce;
 }
