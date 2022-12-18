@@ -19,7 +19,7 @@ public class Disable_Item : MonoBehaviour
   }
 
   #region Properties
-  float timeToDisable = 0.6f;
+  float timeToDisable = 0.5f;
   float timer;
   #endregion
 }
