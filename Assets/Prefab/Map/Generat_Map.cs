@@ -6,10 +6,13 @@ public class Generat_Map : MonoBehaviour
 {
     Dictionary<int, GameObject> tileset;
     Dictionary<int, GameObject> tilegroups;
-    public GameObject grass_fab;
+    public GameObject grass1_fab;
+    public GameObject grass2_fab;
+    public GameObject grass3_fab;
+    public GameObject grass4_fab;
 
-    int map_width = 160;
-    int map_height = 90;
+    int map_width = 99;
+    int map_height = 99;
 
     List<List<int>> noise_grid = new List<List<int>>();
     List<List<GameObject>> tile_grid = new List<List<GameObject>>(); 
@@ -29,7 +32,10 @@ public class Generat_Map : MonoBehaviour
     void CreateTileset()
     {
         tileset = new Dictionary<int, GameObject>();
-        tileset.Add(0, grass_fab);
+        tileset.Add(0, grass1_fab);
+        tileset.Add(1, grass2_fab);
+        tileset.Add(2, grass3_fab);
+        tileset.Add(3, grass4_fab);
     }
 
     void CreateTileGroups()
